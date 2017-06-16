@@ -1,0 +1,14 @@
+/* okay for now we are just defining the face of the image in text until
+i can properly wrap my head around the whole image on the internet issue*/
+
+#first-nav{
+    margin: auto auto 5px;
+}
+@font-face {
+    font-family: kai-beat;
+    src: url(../fonts/abeatbyKaiRegular.otf);
+}
+span.site-logo{
+    font-family: kai-beat;
+    font-size: 2em;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale = 1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='media/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/INDEX.css') }}">
+    <title>{{ title }}</title>
+</head>
+<body>
+<nav id="first-nav" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="site-logo">Eanmble</span></a>
+    </div>
+  </div>
+</nav>
+
+<div class="body">
+<div class="container">
+<div class="jumbotron">
+<nav id="second-nav" class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">all_predictions</a></li>
+      <li><a href="#">disabled</a></li>
+      <li><a href="#">disabled</a></li>
+      <li><a href="#">disabled</a></li>
+    </ul>
+</nav>
+
+<div>
+<table class="table">
+<tr>
+{% for table_heading in array[0] %}
+    <th>{{ table_heading }}</th>
+    {% endfor %}
+</tr>
+
+{% for row in array %}
+    <tr>
+    {% for table_data in row %}
+        <td>
+        {{ table_data }}
+</td>{% endfor %}
+</tr>
+{% endfor %}
+
+</table>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
